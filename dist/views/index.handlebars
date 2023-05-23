@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <title>App Controller</title>
+</head>
+<body class="font-poppins">
+
+
+    <header class="bg-blue-700">
+        <h1 id="title" class="max text-xl text-center text-white py-2">AutoHotKey Controller</h1>
+    </header>
+
+    <div class="px-2 py-5 3 max-w-md m-auto">
+        {{#each data}}
+        <div class="py-2">
+        <p class="text-lg block py-2 text-center">File Name: <span class="text-lg font-semibold text-gray-500 bg-gray-100 py-1 px-2  rounded-md">{{this}}</span>   </p>
+        <button data-filename="{{this}}" class="btn w-full block py-2 text-center px-4 bg-gradient-to-r from-green-400 to-blue-500 active:from-pink-500 active:to-yellow-500 text-white font-semibold rounded-full shadow-md active:bg-blue-700 ">Play Action</button>
+        </div>
+     
+        {{/each}}
+        
+    </div>
+
+    <script src="/client.js"></script>
+</body>
+</html>
